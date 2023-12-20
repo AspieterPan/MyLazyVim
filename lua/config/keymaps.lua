@@ -25,8 +25,3 @@ vim.keymap.set(
     "<C-w>o",
     { desc = "Close all other windows", noremap = true, silent = true }
 )
-
-vim.keymap.set({ "n", "x" }, "<M-k>", "<C-w>+", { desc = "Increase height", noremap = true, silent = true })
-vim.keymap.set({ "n", "x" }, "<M-j>", "<C-w>-", { desc = "Decrease height", noremap = true, silent = true })
-vim.keymap.set({ "n", "x" }, "<M-h>", "<C-w><", { desc = "Decrease width", noremap = true, silent = true })
-vim.keymap.set({ "n", "x" }, "<M-l>", "<C-w>>", { desc = "Increase width", noremap = true, silent = true })

@@ -7,3 +7,4 @@ vim.opt.shiftwidth = 4
 vim.opt.tabstop = 4
 vim.opt.expandtab = false
 vim.opt.clipboard = ""
+vim.opt.ttimeoutlen = 5
