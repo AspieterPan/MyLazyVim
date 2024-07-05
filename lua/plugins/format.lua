@@ -14,6 +14,7 @@ return {
                 ["python"] = { "isort", "black" },
                 ["c"] = { "clang_format" },
                 ["c++"] = { "clang_format" },
+                ["sql"] = { "sqlfmt" },
             },
         },
     },

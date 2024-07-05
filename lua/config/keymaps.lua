@@ -25,3 +25,6 @@ vim.keymap.set(
     "<C-w>o",
     { desc = "Close all other windows", noremap = true, silent = true }
 )
+
+vim.keymap.set({ "n", "x" }, "gh", "^", { desc = "Go to line head", noremap = true, silent = true })
+vim.keymap.set({ "n", "x" }, "gl", "$", { desc = "Go to line last", noremap = true, silent = true })
