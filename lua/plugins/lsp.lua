@@ -9,6 +9,7 @@ return {
                 clangd = {
                     filetypes = { "c", "cpp", "objc", "objcpp", "cuda", "proto", "hh", "cc" },
                 },
+                html = {},
             },
         },
     },

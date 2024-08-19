@@ -3,8 +3,8 @@
 -- Add any additional keymaps here
 
 -- clean blank lines in visual mode
-vim.keymap.set("x", "<leader>id", [[:g/^\s*\n/d<CR>]], { noremap = true, silent = true })
-vim.keymap.set({ "n", "x" }, "Y", [["+y]], { noremap = true, silent = true })
+vim.keymap.set("x", "<leader>id", [[:g/^\s*\n/d<CR>]], { desc = "Delete empty lines", noremap = true, silent = true })
+vim.keymap.set({ "n", "x" }, "Y", [["+y]], { desc = "Copy to system clipboard", noremap = true, silent = true })
 
 vim.keymap.set({ "n" }, "<leader>wh", "<C-w>h", { desc = "Go to the left window", noremap = true, silent = true })
 vim.keymap.set({ "n" }, "<leader>wj", "<C-w>j", { desc = "Go to the down window", noremap = true, silent = true })
