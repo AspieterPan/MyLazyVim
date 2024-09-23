@@ -8,3 +8,5 @@ vim.opt.tabstop = 4
 vim.opt.expandtab = false
 vim.opt.clipboard = ""
 vim.opt.ttimeoutlen = 5
+vim.g.lazyvim_picker = "fzf"
+vim.o.cursorcolumn = true

@@ -14,7 +14,7 @@ vim.keymap.set({ "n" }, "<leader>wl", "<C-w>l", { desc = "Go to the right window
 vim.keymap.set({ "n", "x" }, "<leader>w+", "<C-w>+", { desc = "Increase height", noremap = true, silent = true })
 vim.keymap.set({ "n", "x" }, "<leader>w-", "<C-w>-", { desc = "Decrease height", noremap = true, silent = true })
 vim.keymap.set({ "n", "x" }, "<leader>w<", "<C-w><", { desc = "Decrease width", noremap = true, silent = true })
-vim.keymap.set({ "n", "x" }, "<leader>w>", "<C-w>>", { desc = "Increase height", noremap = true, silent = true })
+vim.keymap.set({ "n", "x" }, "<leader>w>", "<C-w>>", { desc = "Increase width", noremap = true, silent = true })
 
 vim.keymap.set({ "n", "x" }, "<leader>w=", "<C-w>=", { desc = "Equally high and wide", noremap = true, silent = true })
 
@@ -28,3 +28,7 @@ vim.keymap.set(
 
 vim.keymap.set({ "n", "x" }, "gh", "^", { desc = "Go to line head", noremap = true, silent = true })
 vim.keymap.set({ "n", "x" }, "gl", "$", { desc = "Go to line last", noremap = true, silent = true })
+
+vim.keymap.set({ "n", "x" }, "<leader>fC", function()
+    return LazyVim.pick.open("files", { cwd = "~/.config/nvim/" })
+end, { desc = "Find my configs", noremap = true, silent = true })
