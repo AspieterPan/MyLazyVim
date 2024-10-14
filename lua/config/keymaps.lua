@@ -30,5 +30,7 @@ vim.keymap.set({ "n", "x" }, "gh", "^", { desc = "Go to line head", noremap = tr
 vim.keymap.set({ "n", "x" }, "gl", "$", { desc = "Go to line last", noremap = true, silent = true })
 
 vim.keymap.set({ "n", "x" }, "<leader>fC", function()
-    return LazyVim.pick.open("files", { cwd = "~/.config/nvim/" })
-end, { desc = "Find my configs", noremap = true, silent = true })
+    return LazyVim.pick.open("files", { cwd = vim.fn.stdpath("data") .. "/lazy" })
+end, { desc = "Find Plugin configs", noremap = true, silent = true })
+
+vim.keymap.set("i", "<C-l>", "<C-o>x", { desc = "Del right char in insert mode", noremap = true, silent = true })
