@@ -1,22 +1,35 @@
 return {
-    {
-        "nvim-orgmode/orgmode",
-        event = "VeryLazy",
-        ft = { "org" },
-        config = function()
-            -- Setup orgmode
-            require("orgmode").setup({
-                org_agenda_files = "/Volumes/PortableSSD/org/**/*",
-                org_default_notes_file = "/Volumes/PortableSSD/org/todo.org",
-                org_todo_keywords = { "TODO", "STRT", "WAIT", "LOOP", "HOLD", "IDEA", "|", "DONE", "KILL", "PROJ" },
-            })
-
-            -- NOTE: If you are using nvim-treesitter with ~ensure_installed = "all"~ option
-            -- add ~org~ to ignore_install
-            -- require('nvim-treesitter.configs').setup({
-            --   ensure_installed = 'all',
-            --   ignore_install = { 'org' },
-            -- })
-        end,
-    },
+    -- {
+    --     "nvim-orgmode/orgmode",
+    --     dependencies = {
+    --         "chipsenkbeil/org-roam.nvim",
+    --         "lukas-reineke/headlines.nvim",
+    --         "nvim-orgmode/org-bullets.nvim",
+    --     },
+    --     event = "VeryLazy",
+    --     ft = { "org" },
+    --     config = function()
+    --         -- Setup orgmode
+    --         require("orgmode").setup({
+    --             org_agenda_files = "/Volumes/PortableSSD/org/**/*",
+    --             org_default_notes_file = "/Volumes/PortableSSD/org/todo.org",
+    --             org_todo_keywords = { "TODO", "STRT", "WAIT", "LOOP", "HOLD", "IDEA", "|", "DONE", "KILL", "PROJ" },
+    --         })
+    --
+    --         -- NOTE: If you are using nvim-treesitter with ~ensure_installed = "all"~ option
+    --         -- add ~org~ to ignore_install
+    --         -- require('nvim-treesitter.configs').setup({
+    --         --   ensure_installed = 'all',
+    --         --   ignore_install = { 'org' },
+    --         -- })
+    --
+    --         require("org-roam").setup({
+    --             directory = "/Volumes/PortableSSD/org/roam/",
+    --         })
+    --
+    --         require("headlines").setup()
+    --
+    --         require("org-bullets").setup()
+    --     end,
+    -- },
 }
