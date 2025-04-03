@@ -12,3 +12,12 @@ end
 --         vim.cmd("normal! zz")
 --     end,
 -- })
+
+vim.api.nvim_create_autocmd({ "FileType" }, {
+    pattern = "markdown",
+    group = augroup("disable md format"),
+    callback = function()
+        require("lazyvim.util").format.enable(false, true)
+        require("snacks").toggle.get("diagnostics").opts.set(false)
+    end,
+})

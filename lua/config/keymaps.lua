@@ -34,3 +34,21 @@ vim.keymap.set({ "n", "x" }, "<leader>fC", function()
 end, { desc = "Find Plugin configs", noremap = true, silent = true })
 
 vim.keymap.set("i", "<C-l>", "<C-o>x", { desc = "Del right char in insert mode", noremap = true, silent = true })
+
+vim.keymap.set({ "n", "x" }, "<leader>fp", function()
+    require("snacks.picker").projects()
+end, {
+    desc = "Projects",
+    noremap = true,
+    silent = true,
+})
+
+-- insert new heading in markdown
+vim.keymap.set(
+    { "n" },
+    "<leader>cj",
+    "mt[[yy`tpwC",
+    { desc = "Insert new heading in markdown", noremap = true, silent = true }
+)
+
+vim.cmd("hi CursorColumn guibg=#2a2b3c")
