@@ -1,4 +1,17 @@
-if false then
+local function is_enable_codeium()
+    local file = io.open("/Users/xiaobai/.config/nvim/lazyvim.json", "r")
+    if not file then
+        return false
+    end
+    for line in file:lines() do
+        if line:match("codeium") then
+            return true
+        end
+    end
+    return false
+end
+
+if not is_enable_codeium() then
     return {}
 end
 
@@ -20,6 +33,7 @@ return {
                     ["dapui_breakpoints"] = false,
                     ["dapui_stacks"] = false,
                     ["dapui_watches"] = false,
+                    ["snacks_picker_input"] = false,
                 },
             },
         },
