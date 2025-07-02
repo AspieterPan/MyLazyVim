@@ -50,5 +50,3 @@ vim.keymap.set(
     "mt[[yy`tpwC",
     { desc = "Insert new heading in markdown", noremap = true, silent = true }
 )
-
-vim.cmd("hi CursorColumn guibg=#2a2b3c")
