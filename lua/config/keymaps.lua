@@ -50,3 +50,16 @@ vim.keymap.set(
     "mt[[yy`tpwC",
     { desc = "Insert new heading in markdown", noremap = true, silent = true }
 )
+
+vim.keymap.set(
+    { "n" },
+    "<leader>if",
+    ":let @+ = expand('%:p')<CR>",
+    { desc = "Get current file path", noremap = true, silent = true }
+)
+vim.keymap.set(
+    { "n" },
+    "<leader>ib",
+    ":let @+ = expand('%:t') . ':' . line('.')<CR>",
+    { desc = "Get breakpoint information", noremap = true, silent = true }
+)

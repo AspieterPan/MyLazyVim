@@ -1,3 +1,4 @@
+---@diagnostic disable: missing-fields
 return {
     {
         "neovim/nvim-lspconfig",
@@ -6,9 +7,6 @@ return {
             ---@type lspconfig.options
             servers = {
                 -- pyright will be automatically installed with mason and loaded with lspconfig
-                clangd = {
-                    filetypes = { "c", "cpp", "objc", "objcpp", "cuda", "proto", "hh", "cc" },
-                },
                 html = {},
             },
         },

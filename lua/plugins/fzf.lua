@@ -2,7 +2,7 @@ return {
     {
         "ibhagwan/fzf-lua",
         cmd = "FzfLua",
-        dependencies = { "echasnovski/mini.icons" },
+        dependencies = { "nvim-mini/mini.icons" },
         keys = {},
         opts = function(_, opts)
             local fzf = require("fzf-lua")
