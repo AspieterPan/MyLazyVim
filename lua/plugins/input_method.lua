@@ -1,3 +1,6 @@
+if vim.env.SSH_CONNECTION then
+    return {}
+end
 return {
     {
         "keaising/im-select.nvim",
