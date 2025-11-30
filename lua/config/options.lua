@@ -10,5 +10,18 @@ vim.opt.clipboard = ""
 vim.opt.ttimeoutlen = 5
 vim.g.lazyvim_picker = "snacks"
 -- vim.o.cursorcolumn = true
-vim.o.shell = "/opt/homebrew/bin/fish"
 vim.g.ai_cmp = false
+
+if vim.env.SSH_CONNECTION then
+    vim.g.clipboard = {
+        name = "OSC 52",
+        copy = {
+            ["+"] = require("vim.ui.clipboard.osc52").copy("+"),
+            ["*"] = require("vim.ui.clipboard.osc52").copy("*"),
+        },
+        paste = {
+            ["+"] = require("vim.ui.clipboard.osc52").paste("+"),
+            ["*"] = require("vim.ui.clipboard.osc52").paste("*"),
+        },
+    }
+end
